@@ -1,11 +1,19 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
 
+
 // create array
 string[] food = { "pizza", "tiramisù", "fried chicken", "pasta", "meringa", "focaccia" }; 
 
+
 //array length
 Console.WriteLine($"How many foods are: {food.Length}");
+
+
+//set user choice
+Console.WriteLine("Type your favourite food: ");
+string userFood = Console.ReadLine();
+
 
 for (int i = 0; i < food.Length; i++)
 {
@@ -13,11 +21,14 @@ for (int i = 0; i < food.Length; i++)
 
 }
 
+
 //my favorite food
 Console.WriteLine($"My favourite food: {food[0]}");
 
+
 //my favourite but not too much
 Console.WriteLine($"My favourite, but not too much: {(food[food.Length - 1])}");
+
 
 //middle foods
 if (food.Length % 2 == 0)
