@@ -14,11 +14,25 @@ Console.WriteLine($"How many foods are: {food.Length}");
 Console.WriteLine("Type your favourite food: ");
 string userFood = Console.ReadLine();
 
+//RNG pc choice
+int randomNumber = new Random().Next(0, food.Length);
+Console.WriteLine(randomNumber);
+
 
 for (int i = 0; i < food.Length; i++)
 {
-    Console.WriteLine("Pos N: " + (i+1) + " " + food[i]);
-
+    if(userFood == food[i])
+    {
+        Console.WriteLine($"Pos N: {(i+1)} {food[i]} --> User taste!");
+    }
+    else if (randomNumber == i)
+    {
+        Console.WriteLine($"Pos N: {(i + 1)} {food[i]} --> Computer taste!");
+    }
+    else
+    {
+        Console.WriteLine($"Pos N: {(i + 1)} {food[i]} --> We have the same tastes!");
+    }
 }
 
 
