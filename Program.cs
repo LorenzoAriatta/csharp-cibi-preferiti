@@ -16,25 +16,34 @@ string userFood = Console.ReadLine();
 
 //RNG pc choice
 int randomNumber = new Random().Next(0, food.Length);
-Console.WriteLine(randomNumber);
+//Console.WriteLine(randomNumber);
 
 
+while (!Array.Exists(food, element => element == userFood))
+    {
+        Console.WriteLine("Type your favourite food: ");
+        userFood = Console.ReadLine();
+    }
 for (int i = 0; i < food.Length; i++)
 {
-    if(userFood == food[i])
+    
+    if (userFood == food[i] && randomNumber == i)
     {
-        Console.WriteLine($"Pos N: {(i+1)} {food[i]} --> User taste!");
+        Console.WriteLine($"Pos N: {(i + 1)} {food[i]} --> We have the same tastes!");
     }
     else if (randomNumber == i)
     {
         Console.WriteLine($"Pos N: {(i + 1)} {food[i]} --> Computer taste!");
     }
+    else if ((userFood == food[i]))
+    {
+        Console.WriteLine($"Pos N: {(i + 1)} {food[i]} --> User taste!"); ;
+    }
     else
     {
-        Console.WriteLine($"Pos N: {(i + 1)} {food[i]} --> We have the same tastes!");
-    }
+        Console.WriteLine($"Pos N: {(i + 1)} {food[i]}");
+    }    
 }
-
 
 //my favorite food
 Console.WriteLine($"My favourite food: {food[0]}");
