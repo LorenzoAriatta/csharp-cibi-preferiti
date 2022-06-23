@@ -1,11 +1,20 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
 
-string[] food = { "pizza", "tiramisù", "focaccia", "pasta", "pollo fritto" };
+// create array
+string[] food = { "pizza", "tiramisù", "fried chicken", "pasta", "focaccia" }; 
 
-Console.WriteLine(food.Length);
+//array length
+Console.WriteLine($"How many foods are: {food.Length}");
 
-for(int i = 0; i < food.Length; i++)
+for (int i = 0; i < food.Length; i++)
 {
-    Console.WriteLine((i+1) + " " + food[i]);
+    Console.WriteLine("Pos N: " + (i+1) + " " + food[i]);
+
 }
+
+//my favorite food
+Console.WriteLine($"My favourite food: {food[0]}");
+
+//my favourite but not too much
+Console.WriteLine($"My favourite, but not too much: {(food[food.Length - 1])}");
